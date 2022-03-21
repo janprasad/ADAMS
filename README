@@ -1,0 +1,45 @@
+
+ - This Repo has the following modules
+   1. Python module to train MS COCO weights with arecanut dataset
+   2. Python module to evaluate model 
+   
+Setup to train: 
+    python=3.6.13 
+    tensorflow==1.15.0 
+    Keras==2.2.4 
+    h5py==2.8.0  
+    
+    Install anaconda and run following to setup the enviorment  
+      conda create --name myenv python=3.6.13 tensorflow==1.15.0 Keras==2.2.4 h5py==2.8.0 pip 
+      conda activate myenv
+
+    Clone the Mask R-CNN GitHub Repository
+      git clone https://github.com/matterport/Mask_RCNN.git
+    Install the Mask R-CNN Library 
+      cd Mask_RCNN/
+      sudo pip install -r requirements.txt
+      sudo python setup.py install
+      pip show mask-rcnn
+        Name: mask-rcnn
+        Version: 2.1
+          ... 
+    Download MS Coco Model Weights
+        https://goo.gl/a2p7dS
+    To train run following command
+    python3 arecanut_train.py --dataset ./ArecanutDataset --weights mask_rcnn_coco.h5 train
+
+Setup to evaluate:
+    Make sure arecanut trained weights mask_rcnn_object_0085.h5 is available
+  
+
+  
+     
+
+
+
+
+    
+
+
+
+
